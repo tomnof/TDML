@@ -20,7 +20,7 @@ map<int, TreeVector> createTrainingData(vector<Graph> graphs, int numberOfTDs = 
 vector<TreeVector> createTreeVectorsPerGraph(Graph g, bool isTraining = true, int numberOfTDs = 40)
 {
     // building numberOfTDs decomposition trees for the given graph
-    vector<ITreeDecomposition> tds = generateTDsPerGraph(g, numberOfTDs);
+    vector<TreeDecomposition> tds = generateTDsPerGraph(g, numberOfTDs);
 
     // extract features for each tree
     vector<TreeVector> tdsRepresentation;

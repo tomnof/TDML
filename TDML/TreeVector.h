@@ -9,7 +9,7 @@
 using namespace std;
 
 struct TreeVector{
-    int runningTime;
+    double runningTime;
     vector<double> features;
 };
 

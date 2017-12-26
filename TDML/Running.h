@@ -7,7 +7,7 @@
 
 #include <map>
 #include "TreeVector.h"
-#include "ITreeDecomposition.h"
+#include "TreeDecomposition.h"
 #include "Graph.h"
 #include "TreeDecompositionUtils.h"
 

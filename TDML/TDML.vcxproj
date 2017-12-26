@@ -109,14 +109,21 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\tomnof\Desktop\git\gmp-6.1.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Naama\Dropbox\school\benny\Live\gmp</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <LanguageStandard>
+      </LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\tomnof\Desktop\git\gmp-6.1.2\.libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Naama\Dropbox\school\benny\Live\gmp\.libs</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;gmp-6.1.2.libs;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -155,6 +162,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DataStructures.h" />
     <ClInclude Include="dflat\Decomposition.h" />
     <ClInclude Include="dflat\DecompositionNode.h" />
     <ClInclude Include="dflat\DirectedAcyclicGraph.h" />
@@ -170,14 +178,18 @@
     <ClInclude Include="TreeVector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataStructures.cpp" />
     <ClCompile Include="dflat\Decomposition.cpp" />
     <ClCompile Include="dflat\DecompositionNode.cpp" />
     <ClCompile Include="dflat\ExtensionIterator.cpp" />
     <ClCompile Include="dflat\ItemTree.cpp" />
     <ClCompile Include="dflat\ItemTreeNode.cpp" />
     <ClCompile Include="dflat\solver\default_join\Solver.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="main_test.cpp" />
     <ClCompile Include="Running.cpp" />
     <ClCompile Include="TDML.cpp" />
+    <ClCompile Include="TreeDecomposition.cpp" />
     <ClCompile Include="TreeDecompositionUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
