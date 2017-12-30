@@ -23,7 +23,7 @@ vector<TreeVector> createTreeVectorsPerGraph(Graph g, bool isTraining = true, in
     vector<TreeDecomposition> tds = generateTDsPerGraph(g, numberOfTDs);
 
     // extract features for each tree
-    vector<TreeVector> tdsRepresentation;
+    vector<TreeVector> tdsRepresentation(numberOfTDs);
     for(int i=0; i<numberOfTDs; i++){
         tdsRepresentation[i].features = extractTDFeatures(&tds[i]);
         // if we're on training mode - calculate the real rank of the tree by running  the solver.

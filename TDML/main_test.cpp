@@ -4,7 +4,7 @@
 
 using tdenum::Graph;
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	std::cout << "started dummy test!" << std::endl;
 
 	// Constructs a graph that is a tree with 4 nodes: 0-->1-->2-->3
 	Graph g = Graph(4);
@@ -18,7 +18,8 @@ int main() {
 	vector<Graph> graphs;
 	graphs.push_back(g);
 
-	createTrainingData(graphs, 1);
-	std::cout << "Finished!" << std::endl;
+	map<int, TreeVector> training = createTrainingData(graphs, 1);
+	
+	std::cout << training[0].runningTime << std::endl;
 	return 0;
 }
